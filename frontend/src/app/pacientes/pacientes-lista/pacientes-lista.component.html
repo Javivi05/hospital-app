@@ -1,0 +1,9 @@
+<div class="container mt-3">
+  <h2>Listado de Pacientes</h2>
+
+  <ul class="list-group">
+    <li *ngFor="let p of pacientes" class="list-group-item">
+      {{p.nombre}} - {{p.edad}} años - {{p.diagnostico}}
+    </li>
+  </ul>
+</div>

@@ -39,6 +39,12 @@ jobs:
           cd backend
           composer install
 
+      - name: Prepare Laravel environment
+        run: |
+          cd backend
+          cp .env.example .env
+          php artisan key:generate
+
       - name: Run Laravel tests
         run: |
           cd backend
